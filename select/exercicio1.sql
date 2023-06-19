@@ -32,8 +32,11 @@ values ("Geandro", "Estagiário back-end", 3000.00, 30);
 
 alter table tabela_colaboradores modify salario decimal(8,2);
 
-update tabela_colaboradores set salario = 1500.00 where id = 6;
+update tabela_colaboradores set salario = 8000.00 where id = 5;
 
-select * from tabela_colaboradores where salario < 2000.00;
+select * from tabela_colaboradores where salario <= 8000.00;
 
-select * from tabela_colaboradores where salario > 2000.00;
+select * from tabela_colaboradores where salario > 8000.00;
+
+
+
