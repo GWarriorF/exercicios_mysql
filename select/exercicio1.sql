@@ -1,6 +1,7 @@
 create database colaboradores_RH;
 
 use colaboradores_RH;
+
 create table tabela_colaboradores(
 	id bigint auto_increment,
     nome_colaborador varchar(255) not null, 
