@@ -37,8 +37,6 @@ values ("Tanque", "Brasileiro");
 
 select * from tb_classes;
 
-select * from tb_personagens;
-
 -- Cria uma coluna na tabela personagens 
 alter table tb_personagens add classes_id bigint;
 
@@ -63,11 +61,35 @@ values("Patolino", 1200, 50, "Especialista em feitiço", "Mas o mago é implacá
 insert into tb_personagens(nome, vida_maxima, dano_por_ataque, atributo, habilidade, energia, classes_id)
 values("Eduardo Marinho", 1500, 2, "Consumidor de almas", "Tu vai me negar um prato de comida?", 600, 5);
 
-tabela_colaboradoresinsert into tb_personagens(nome, vida_maxima, dano_por_ataque, atributo, habilidade, energia, classes_id)
+insert into tb_personagens(nome, vida_maxima, dano_por_ataque, atributo, habilidade, energia, classes_id)
 values("Naldo", 500, 5, "Rei da mentira", "Sou irmão do Chris Brown ", 200, 2);
 
 insert into tb_personagens(nome, vida_maxima, dano_por_ataque, atributo, habilidade, energia, classes_id)
 values("Mike Baguncinha", 1000, 40, "Mentiroso mirim", 'Com uma ak-45, pente alongado', 600, 4);
+
+insert into tb_personagens(nome, vida_maxima, dano_por_ataque, atributo, habilidade, energia, classes_id)
+values("Mickey", 800, 50, "Boxeador", 'Aiii que deLicia', 400, 1);
+
+select * from tb_personagens;
+
+select * from tb_personagens where vida_maxima >= 1000;
+
+select * from tb_personagens where energia between 200 and 600;
+
+select * from tb_personagens where nome like("%m%");
+
+select  * from tb_personagens
+inner join tb_classes on tb_classes.id = tb_personagens.classes_id;
+
+select  * from tb_personagens
+inner join tb_classes on tb_classes.id = tb_personagens.classes_id;
+
+select tb_personagens.nome, tb_classes.categoria from tb_personagens
+inner join tb_classes 
+	on tb_classes.id = tb_personagens.classes_id
+    where tb_classes.categoria = 'Mago';
+    
+
 
 
 
